@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: esteban
+  password: esteban12
+  host: localhost
+
+development:
+  <<: *default
+  database: datos_estudiante_development
+
+test:
+  <<: *default
+  database: datos_estudiante_test
+
+production:
+  <<: *default
+  database: datos_estudiante_production
